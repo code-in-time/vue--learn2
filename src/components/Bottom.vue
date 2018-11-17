@@ -1,17 +1,18 @@
 <template>
-  <div  class="Bottom" v-on:emit-event-main2-counter="cntr = $event">
-      bottom text and cntr ({{cntr}})
+  <div  class="Bottom" >
+      bottom text and cntr ({{cntrProp}})
   </div>
 </template>
 
 <script>
 
 export default {
-    data: () => {
-        return {
-            cntr: 0
-        }
-    },
+    props: ['cntrProp'],
+    // data: () => {
+    //     return {
+    //         cntr: 0
+    //     }
+    // },
 }
 </script>
 

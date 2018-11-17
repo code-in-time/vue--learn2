@@ -1,7 +1,8 @@
 <template>
   <div class="app">
-    <Main2 />
-    <Bottom/>
+    <Main2 v-on:emit-event-main2-counter="sendToBottom" />
+    <Bottom :cntrProp="cntr"/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,7 +15,17 @@ export default {
     Main2,
     Bottom
   },
-
+  data: () => {
+    return {
+      cntr: 0
+    }
+  },
+  methods: {
+    sendToBottom(x) {
+      console.log('x', x);
+      this.cntr = x;
+    } 
+  }
 }
 </script>
 

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import appInput from "./appInput.vue";
+
     export default {
         data: () => {
             return {
@@ -17,13 +17,12 @@
             }
         },
         components: {
-           appInput,
        },
         methods: {
             btnClickButton(e) {
-                this.$emit('emit-event-main2-counter', this.counter)
                 console.log('button');
                 this.counter +=1;
+                this.$emit('emit-event-main2-counter', this.counter)
             }
         }
 

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="app">
     test
-    <!-- <Main2 v-on:emit-event-main2-counter="sendToBottom" />
-    <Bottom :cntrProp="cntr"/> -->
+    <Main2 v-on:emit-event-main2-counter="sendToBottom" />
+    <Bottom :cntrProp="cntr"/>
   </div>
 </template>
 

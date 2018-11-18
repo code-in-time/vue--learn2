@@ -1,8 +1,8 @@
 <template>
-  <div class="app">
-    <Main2 v-on:emit-event-main2-counter="sendToBottom" />
-    <Bottom :cntrProp="cntr"/>
-    <router-view></router-view>
+  <div>
+    test
+    <!-- <Main2 v-on:emit-event-main2-counter="sendToBottom" />
+    <Bottom :cntrProp="cntr"/> -->
   </div>
 </template>
 

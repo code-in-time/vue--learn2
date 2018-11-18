@@ -7,12 +7,12 @@ import Contact from '././components/Contact'
 
 Vue.config.productionTip = false
 
-Vue.use(VueRouter);
+//Vue.use(VueRouter);
 
 const Bar = { template: '<div>bar </div>' }
 
 const routers = [
-  { path: '/', component: Bar },
+  { path: '/', component: App },
   { path: '/bar', component: Bar },
   { path: '/home', component: Home },
   { path: '/contact', component: Contact },
@@ -32,7 +32,9 @@ let router = new VueRouter({mode: 'history', routes: routers});
 //   router
 // }).$mount('#app')
 
-new Vue({
+const a = new Vue({
   // router,
-  render: h => (App),
-}).$mount('#app');
+  render: h => (Bar),
+})
+
+a.$mount('#app');
